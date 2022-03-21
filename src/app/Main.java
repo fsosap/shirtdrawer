@@ -45,9 +45,11 @@ public class Main{
                     if(response == 1){
                         System.out.println("¿a donde desea mover la camisa?");
                         System.out.print("x: ");
-                        double x= user.nextDouble();
+                        double coord = Double.parseDouble(user.next());
+                        double x= coord;
                         System.out.print("y: ");
-                        double y= user.nextDouble();
+                        coord = Double.parseDouble(user.next());
+                        double y= coord;
                         shirt.setPosX(x);
                         shirt.setPosY(y);
                         d.setShirt(shirt);
@@ -56,7 +58,7 @@ public class Main{
 
                     if(response == 2){
                         System.out.print("valor para escalar:");
-                        double escala = user.nextDouble();
+                        double escala = Double.parseDouble(user.next());
                         shirt.setAncho(shirt.getAncho()*escala);
                         shirt.setLargo(shirt.getLargo()*escala);
                         shirt.setEspalda(shirt.getEspalda()*escala);
@@ -67,7 +69,7 @@ public class Main{
 
                     if(response == 3){
                         System.out.println("ingresa el angulo a rotar");
-                        double angle = Math.toRadians(user.nextDouble());
+                        double angle = Math.toRadians(Double.parseDouble(user.next()));
                         d.setRota(true, angle);
                         jf.repaint();
                         try{

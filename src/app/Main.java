@@ -21,7 +21,7 @@ public class Main{
         double x = user.nextDouble();
         System.out.print("posición en Y:");
         double y = user.nextDouble();
-        Shirt shirt = new Shirt(largo, ancho, espalda, cadera, x, y);
+        final Shirt shirt = new Shirt(largo, ancho, espalda, cadera, x, y);
 
         Drawer d = new Drawer();
 
